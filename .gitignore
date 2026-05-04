@@ -1,2 +1,7 @@
 .venv/*
+
 !.venv/.gitkeep
+
+.env
+
+__pycache__/
