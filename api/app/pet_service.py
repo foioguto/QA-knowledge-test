@@ -20,7 +20,8 @@ class PetService:
 
     def delete_pet(self, pet_id: int):
         return self.client.delete_pet(pet_id)
-    
+
     def update_pet(self, pet_id: int, payload: dict):
-        return self.client.update_pet(pet_id, payload)      
-    
+        updated_payload = payload.copy()
+        updated_payload["id"] = pet_id
+        return self.client.update_pet(updated_payload)

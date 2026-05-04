@@ -11,7 +11,7 @@ class UserService:
         payload = build_user_payload()
         response = self.client.create_user(payload)
         assert response.status_code == 200
-        return response.json()
+        return payload
 
 
     def get_user(self, username: str):
